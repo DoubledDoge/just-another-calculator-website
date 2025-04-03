@@ -1,7 +1,13 @@
 import App from './App.svelte'
 
+// Make sure the element exists
+const target = document.getElementById('app')
+if (!target) {
+  throw new Error('Could not find #app element')
+}
+
 const app = new App({
-  target: document.getElementById('app') as HTMLElement
+  target
 })
 
 export default app

@@ -185,22 +185,6 @@
     flex-direction: column;
     justify-content: center;
 
-    .expression {
-      font-size: 24px;
-      color: rgba($primary-color, 0.7);
-      margin-bottom: 5px;
-      min-height: 24px;
-      width: 100%;
-      text-align: right;
-    }
-
-    .current-value {
-      font-size: 40px;
-      width: 100%;
-      text-align: right;
-      overflow: hidden;
-    }
-
     .preview {
       position: absolute;
       bottom: 5px;
