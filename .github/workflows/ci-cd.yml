@@ -1,0 +1,45 @@
+name: CI/CD
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "23"
+                  cache: "npm"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Check formatting
+              run: npx prettier --write .
+
+            - name: Lint
+              run: npx eslint . --ext .js,.ts,.vue
+
+            - name: Type check
+              run: npm run vue-tsc --noEmit
+
+            - name: Build
+              run: npm run build
+
+            - name: Cache build artifacts
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      dist
+                      .vite
+                  key: ${{ runner.os }}-build-${{ github.sha }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-

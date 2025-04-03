@@ -1,0 +1,31 @@
+name: Semantic Release
+
+on:
+    workflow_dispatch:
+
+jobs:
+    release:
+        permissions:
+            contents: write
+            issues: write
+            pull-requests: write
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Install AOS types
+              run: npm install --save-dev @types/aos
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+                  cache: "npm"
+            - run: npm ci
+            - run: npm run build
+
+            - name: Create release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npx semantic-release
