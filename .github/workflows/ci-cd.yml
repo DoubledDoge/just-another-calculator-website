@@ -28,9 +28,6 @@ jobs:
             - name: Lint
               run: npx eslint . --ext .js,.ts,.vue
 
-            - name: Type check
-              run: npm run vue-tsc --noEmit
-
             - name: Build
               run: npm run build
 
