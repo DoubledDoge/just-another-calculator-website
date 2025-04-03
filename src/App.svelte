@@ -267,14 +267,14 @@
         color: white;
       }
     }
+  }
 
-    &.double {
-      flex: 2.1;
-    }
+  .calc-button.double {
+    flex: 2.1;
+  }
 
-    &.triple {
-      flex: 3.2;
-    }
+  .calc-button.triple {
+    flex: 3.2;
   }
 
   .expression-line {
