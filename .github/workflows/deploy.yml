@@ -17,9 +17,6 @@ jobs:
                   node-version: "20"
                   cache: "npm"
 
-            - name: Install AOS types
-              run: npm install --save-dev @types/aos
-
             - name: Install and Build
               run: |
                   npm ci
