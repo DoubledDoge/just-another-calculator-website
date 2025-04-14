@@ -20,7 +20,7 @@
     "prettier": "^3.5.3",
     "sass": "^1.86.3",
     "semantic-release": "^24.2.3",
-    "svelte": "^5.25.8",
+    "svelte": "^5.26.3",
     "svelte-check": "^4.1.4",
     "svelte-preprocess": "^6.0.3",
     "typescript": "^5.8.3",
