@@ -68,7 +68,6 @@ Thanks to the following guides and videos that helped me in making this project 
 1. ["ASMR Programming - Calculator App Coding - No Talking"](https://youtu.be/sBJmRD7kNTk?si=rwBeF5f4JAFmcMmM) by AsmrProg (Direct inspiration and design)
 2. ["Automate your GitHub Actions Releases"](https://youtu.be/mah8PV6ugNY?si=89sEaKP98L4EFIeo) by Dave's Dev Channel (Semantic Release tutorial)
 3. ["TypeScript Tutorial for Beginners"](https://youtu.be/d56mG7DezGs?si=MXyVzUIsJ9XPLANO) by Programming with Mosh (TypeScript tutorial)
-4. ["Ultimate Tailwind CSS Tutorial"](https://youtu.be/pfaSUYaSgRo?si=J624GO5XDqX0eA0F) by Fireship (Tailwind CSS tutorial)
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
